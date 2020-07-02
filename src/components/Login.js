@@ -11,7 +11,7 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     console.log('dont reload', email, password);
-    const response = await axios.post('http://localhost:3012/login', {
+    const response = await axios.post('http://demo-api.fitlete.co/login', {
       email,
       password
     })
@@ -21,7 +21,7 @@ const Login = () => {
 
   const onClickCheck = async () => {
     const token = localStorage.getItem('token');
-    const response = await axios.get('http://localhost:3012/protected', {
+    const response = await axios.get('http://demo-api.fitlete.co/protected', {
       headers: {
         token
       }

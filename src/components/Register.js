@@ -17,14 +17,14 @@ const Register = () => {
 
 
   const getUsers = async () => {
-    const response = await axios.get('http://localhost:3012/users');
+    const response = await axios.get('http://demo-api.fitlete.co/users');
     setUsers(response.data);
   }
 
   const onSubmit = async (event) => {
     event.preventDefault();
     console.log('dont reload', name, email, password, gender);
-    const response = await axios.post('http://localhost:3012/user', {
+    const response = await axios.post('http://demo-api.fitlete.co/user', {
       name,
       email,
       gender,
